@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: PhD Candidate, Department of Mathematical Sciences, Tsinghua University
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Department of Mathematical Sciences</p>
+    <p>Tsinghua University</p>
+    <p>Beijing 100084, P.R. China</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +27,68 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+## About Me
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am a PhD candidate at the Department of Mathematical Sciences at Tsinghua University with an interest in developing innovative computational methods for solving challenging inverse problems in imaging. My research focuses on applying optimization-based and learning-based methods to solve inverse problems in imaging, particularly optical imaging, scattering imaging, and medical imaging, with special emphasis on three-dimensional reconstruction, shape design, and surface generation.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+## Research Interests
+
+- Inverse Problems, specifically Inverse Scattering Problems and Medical Imaging
+- Deep Learning Approach to Shape Optimization
+- Computational Imaging
+- Optimization Algorithms
+
+## Education
+
+- **Tsinghua University**, Beijing, China (Since Sept. 2019)  
+  Ph.D. in Mathematics  
+  Thesis Advisor: Prof. Chen Junqing
+
+- **Lanzhou University**, Lanzhou, China (June 2019)  
+  B.S. in Mathematics and Applied Mathematics
+
+- **Georgia State University**, USA (June 2017 - Sept. 2017)  
+  Exchange in the Department of Mathematics and Statistics
+
+## Publications
+
+- **Solving inverse obstacle scattering problem with latent surface representations**  
+  (with Junqing Chen and Bangti Jin)  
+  *Inverse Problems*, (2024). [pdf]
+
+- **An Alternating Direction Method of Multipliers for Inverse Lithography Problem**  
+  (with Junqing Chen)  
+  *Numerical Mathematics: Theory, Methods and Applications*, 16 (2023). [pdf]
+
+## Research Statement
+
+My research on inverse obstacle scattering problems introduces a novel approach using implicit surface representations to reconstruct unknown object shapes from scattered field measurements. This representation framework enables flexible modeling of complex geometries without explicit parameterization, significantly improving our ability to recover objects with intricate shapes and topological variations.
+
+In my work on inverse lithography problems, I developed an efficient ADMM-based algorithm that addresses the challenge of determining optimal mask patterns in semiconductor manufacturing. The method introduces a novel problem decomposition strategy that transforms complex optimization problems into efficiently solvable subproblems.
+
+My research program aims to advance both the theoretical understanding and practical applications of inverse problems in imaging, with particular focus on computational efficiency, accuracy, and real-world applicability. By integrating techniques from optimization, numerical analysis, and machine learning, I seek to develop innovative approaches to challenging inverse problems across scientific and engineering disciplines.
+
+## Awards and Honors
+
+- National Endeavor Scholarship, Lanzhou University of China (2016)
+- The 9th National College Math Competition National Second Prize, China (2018)
+
+## Teaching Experience
+
+**Associate Teaching Experience at Tsinghua University:**
+- Probability Theory and Mathematical Statistics (Autumn 2020)
+- Calculus (Spring 2020)
+- Advanced Numerical Analysis (Autumn 2019)
+
+## Scientific Events
+
+- Coorganizer: "0-1 Seminar", Tsinghua University (July 2022)
+
+## Seminar and Conference Talks
+
+- The 631st Doctoral Student Forum of Tsinghua University (April 2024)
+
+## Contact
+
+- Email: liuhb19@mails.tsinghua.edu.cn
+- Phone: (86) 18810959597

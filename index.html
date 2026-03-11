@@ -97,13 +97,11 @@
                 Generative Prior-Guided Neural Interface Reconstruction for 3D Electrical Impedance Tomography
               </div>
               <div class="author">
-                <b>Haibo Liu</b>, Junqing Chen, Guang Lin  (Journal of Computational Physics 2026)
+                <b>Haibo Liu</b>, Junqing Chen, Guang Lin
               </div>
+              <div class="Journal">Journal of Computational Physics 2026</div>
               <div class="material">
                 <a href="https://www.sciencedirect.com/science/article/pii/S0021999126001919">Paper</a>
-              </div>
-              <div class="description">
-                Reconstructing complex 3D interfaces from indirect measurements remains a grand challenge in scientific computing, particularly for ill-posed inverse problems like Electrical Impedance Tomography (EIT). Traditional shape optimization struggles with topological changes and regularization tuning, while emerging deep learning approaches often compromise physical fidelity or require prohibitive amounts of paired training data. We present a transformative “solver-in-the-loop” framework that bridges this divide by coupling a pre-trained 3D generative prior with a rigorous boundary integral equation (BIE) solver. Unlike Physics-Informed Neural Networks (PINNs) that treat physics as soft constraints, our architecture enforces the governing elliptic PDE as a hard constraint at every optimization step, ensuring strict physical consistency. Simultaneously, we navigate a compact latent manifold of plausible geometries learned by a differentiable neural shape representation, effectively regularizing the ill-posed problem through data-driven priors rather than heuristic smoothing. By propagating adjoint shape derivatives directly through the neural decoder, we achieve fast, stable convergence with dramatically reduced degrees of freedom. Extensive experiments on 3D high-contrast EIT demonstrate that this principled hybrid approach yields superior geometric accuracy and data efficiency which is difficult to achieve using traditional methods, establishing a robust new paradigm for physics-constrained geometric discovery.
               </div>
               </td>
             </tr>   
@@ -117,15 +115,13 @@
                 Solving inverse obstacle scattering problem with latent surface representations
               </div>
               <div class="author">
-                Junqing Chen, Bangti Jin, <b>Haibo Liu</b> (Inverse Problems 2024)
+                Junqing Chen, Bangti Jin, <b>Haibo Liu</b>
               </div>
+              <div class="Journal">Inverse Problems 2024</div>
               <div class="material">
                  <a href="https://iopscience.iop.org/article/10.1088/1361-6420/ad466a">Paper</a> |  
                 <a href="https://github.com/liuhaibogit/Latent_ISP">Code</a>
                 <br>
-              </div>
-              <div class="description">
-                We propose a novel iterative numerical method to solve the three-dimensional inverse obstacle scattering problem of recovering the shape of the obstacle from far-field measurements. To address the inherent ill-posed nature of the inverse problem, we advocate the use of a trained latent representation of surfaces as the generative prior. This prior enjoys excellent expressivity within the given class of shapes, and meanwhile, the latent dimensionality is low, which greatly facilitates the computation. Thus, the admissible manifold of surfaces is realistic and the resulting optimization problem is less ill-posed. We employ the shape derivative to evolve the latent surface representation, by minimizing the loss, and we provide a local convergence analysis of a gradient descent type algorithm to a stationary point of the loss. We present several numerical examples, including also backscattered and phaseless data, to showcase the effectiveness of the proposed algorithm.
               </div>
               </td>
             </tr>     
@@ -138,13 +134,11 @@
               An Alternating Direction Method of Multipliers for Inverse Lithography Problem
             </div>
             <div class="author">
-              Junqing Chen, <b>Haibo Liu</b> (Numer. Math. Theor. Meth. Appl. 2023)
+              Junqing Chen, <b>Haibo Liu</b>
             </div>
+            <div class="Journal">Numer. Math. Theor. Meth. Appl. 2023</div>
             <div class="material">
               <a href="https://global-sci.com/nmtma/article/view/14455">Paper</a>
-            </div>
-            <div class="description">
-              We propose an alternating direction method of multipliers (ADMM) to solve an optimization problem stemming from inverse lithography. The objective functional of the optimization problem includes three terms: the misfit between the imaging on wafer and the target pattern, the penalty term which ensures the mask is binary and the total variation regularization term. By variable splitting, we introduce an augmented Lagrangian for the original objective functional. In the framework of ADMM method, the optimization problem is divided into several subproblems. Each of the subproblems can be solved efficiently. We give the convergence analysis of the proposed method. Specially, instead of solving the subproblem concerning sigmoid, we solve directly the threshold truncation imaging function which can be solved analytically. We also provide many numerical examples to illustrate the effectiveness of the method.
             </div>
             </td>
           </tr>

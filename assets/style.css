@@ -100,7 +100,15 @@ body {
     font-weight: 400;
   }
 
-  /* Hero: text left, circular photo right; photo top ~ first paragraph */
+  /* Hero: left content + circular photo right, vertically centered together */
+  table.profile-header {
+    margin-top: 3em;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  table.profile-header > tbody > tr > td {
+    vertical-align: middle;
+  }
   table.profile-header .profile-photo {
-    padding-top: 2.85em;
+    padding-left: 28px;
   }

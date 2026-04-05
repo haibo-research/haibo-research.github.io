@@ -100,15 +100,41 @@ body {
     font-weight: 400;
   }
 
-  /* Hero: left content + circular photo right, vertically centered together */
-  table.profile-header {
-    margin-top: 3em;
-    border-collapse: separate;
-    border-spacing: 0;
+  /* Hero: flex row — left text block + photo truly vertically centered */
+  .profile-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 2em;
+    padding-top: 2.25em;
+    padding-bottom: 0.5em;
   }
-  table.profile-header > tbody > tr > td {
-    vertical-align: middle;
+  .profile-header .profile-text {
+    flex: 1 1 65%;
+    min-width: 0;
+    padding-right: 8px;
   }
-  table.profile-header .profile-photo {
-    padding-left: 28px;
+  .profile-header .profile-photo {
+    flex: 0 0 auto;
+    text-align: center;
+    line-height: 0;
+  }
+  .profile-header .profile-photo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  @media (max-width: 720px) {
+    .profile-header {
+      flex-direction: column;
+      align-items: stretch;
+      padding-top: 1.5em;
+    }
+    .profile-header .profile-photo {
+      order: -1;
+      margin-bottom: 0.75em;
+    }
   }

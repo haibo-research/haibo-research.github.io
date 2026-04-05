@@ -1,258 +1,288 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Haibo Liu's homepage">
-  <meta name="keywords" content="Haibo Liu, Liu Haibo, homepage, website">
-
-  <title>Haibo Liu - Westlake University</title>
-
-  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <meta name="keywords" content="Haibo Liu, Liu Haibo, homepage, website, Westlake University">
+  <title>Haibo Liu | 刘海波 - Westlake University</title>
+  
   <link rel="apple-touch-icon" type="image/png" href="images/west-uni.png">
   <link rel="icon" type="image/png" href="images/west-uni.png">
-  <script src="assets/function.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* 全局样式 */
+    :root {
+      --text-color: #333333;
+      --light-text: #555555;
+      --link-color: #1a73e8;
+      --link-hover: #115293;
+      --bg-color: #ffffff;
+      --border-color: #e0e0e0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      line-height: 1.6;
+      font-size: 16px;
+      max-width: 900px; /* 控制最大宽度，居中显示 */
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--link-hover);
+    }
+
+    h1, h2, h3 {
+      color: #222;
+      font-weight: 600;
+    }
+
+    h1 { font-size: 2.2rem; margin-bottom: 0.2rem; }
+    h2 { font-size: 1.4rem; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-top: 40px; margin-bottom: 20px; }
+
+    /* 个人简介区域 (Flexbox 布局) */
+    .profile {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .profile-text { flex: 1; }
+    
+    .profile-text p {
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+
+    .profile-photo {
+      flex-shrink: 0;
+    }
+
+    .profile-photo img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* 链接按钮栏 */
+    .profile-links {
+      margin-top: 15px;
+      font-weight: 500;
+      display: flex;
+      gap: 20px;
+    }
+
+    /* 论文列表区域 */
+    .publication {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      margin-bottom: 30px;
+      align-items: center;
+    }
+
+    .pub-image {
+      width: 250px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    .pub-image img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border: 1px solid #f0f0f0;
+    }
+
+    .pub-info { flex: 1; }
+
+    .pub-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #222;
+    }
+
+    .pub-authors { color: var(--light-text); margin-bottom: 3px; }
+    .pub-authors b { color: #000; }
+    
+    .pub-venue {
+      font-style: italic;
+      color: #444;
+      margin-bottom: 8px;
+    }
+
+    /* 论文资源小按钮标签 (类似于 Arxiv, Code, Video 按钮) */
+    .pub-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .pub-links a {
+      font-size: 0.9rem;
+      padding: 3px 10px;
+      background-color: #f1f3f4;
+      border-radius: 12px;
+      border: 1px solid #dadce0;
+      color: #3c4043;
+      transition: all 0.2s;
+    }
+
+    .pub-links a:hover {
+      background-color: #e8eaed;
+      text-decoration: none;
+    }
+
+    /* 列表样式 */
+    ul { padding-left: 20px; margin-bottom: 20px; }
+    li { margin-bottom: 8px; }
+    
+    .date-right {
+      float: right;
+      color: #777;
+    }
+
+    /* 访客地图居中 */
+    .clustrmaps {
+      width: 250px;
+      margin: 60px auto 20px auto;
+      text-align: center;
+    }
+
+    /* 响应式设计：手机端自动变为上下排列 */
+    @media (max-width: 768px) {
+      .profile { flex-direction: column-reverse; text-align: center; gap: 20px; }
+      .profile-text p { text-align: left; }
+      .profile-links { justify-content: center; }
+      .publication { flex-direction: column; align-items: flex-start; gap: 15px; }
+      .pub-image { width: 100%; max-width: 300px; margin: 0 auto; }
+    }
+  </style>
 </head>
 
+<body>
 
-<body data-new-gr-c-s-check-loaded="14.1014.0" data-gr-ext-installed="">
+  <section class="profile">
+    <div class="profile-text">
+      <h1>Haibo Liu | 刘海波</h1>
+      <p>
+        I am a Research Assistant in the <a href="https://en-soe.westlake.edu.cn/index.shtml/"><b>School of Engineering</b></a> at <a href="https://en.westlake.edu.cn/">Westlake University</a>. Prior to Westlake, I obtained my Ph.D. degree from the <a href="https://www.math.tsinghua.edu.cn/">Department of Mathematical Sciences</a> at <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>, supervised by Associate Prof. <a href="https://www.researchgate.net/profile/Junqing-Chen/"><b>Junqing Chen</b></a>. I am honored to have received the <b>Outstanding Doctoral Dissertation of Tsinghua University</b> (<a href="博士毕业论文.pdf" target="_blank">PDF</a>). I obtained my Bachelor's degree with honors in Mathematics at <a href="https://en.lzu.edu.cn/">Lanzhou University</a>.
+      </p>
+      <p>
+        My current research interests lie in the fields of <b>Graphics, 3D Computer Vision, and Inverse Problems</b>.
+      </p>
+      <div class="profile-links">
+        <a href="mailto:haibo.liu.research@gmail.com">[ Email ]</a>
+        <a href="https://scholar.google.com/citations?hl=zh-CN&user=AF6-ymUAAAAJ" target="_blank">[ Google Scholar ]</a>
+        <a href="https://github.com/haibo-research" target="_blank">[ GitHub ]</a>
+      </div>
+    </div>
+    
+    <div class="profile-photo">
+      <img src="images/haibo_circle.png" alt="Haibo Liu Photo">
+    </div>
+  </section>
 
+  <section>
+    <h2>News</h2>
+    <ul>
+      <li><strong>[06/2024]</strong> Our paper <em>LatentISP</em> is accepted by <strong>Inverse Problems</strong>!</li>
+    </ul>
+  </section>
 
-  <!-- === Homepage Starts === -->
-  <table width="980px" align="center" border="0">
-    <tbody>
-      <tr>
+  <section>
+    <h2>Selected Publications</h2>
 
-        <td></td> <!-- Leave one column blank on the left. -->
-        <td valign="center">
+    <div class="publication">
+      <div class="pub-image">
+        <img src="images/eit_preview.png" alt="EIT Preview">
+      </div>
+      <div class="pub-info">
+        <div class="pub-title">Generative Prior-Guided Neural Interface Reconstruction for 3D Electrical Impedance Tomography</div>
+        <div class="pub-authors"><b>Haibo Liu</b>, Junqing Chen, Guang Lin</div>
+        <div class="pub-venue">Journal of Computational Physics, 2026</div>
+        <div class="pub-links">
+          <a href="https://www.sciencedirect.com/science/article/pii/S0021999126001919" target="_blank">Paper</a>
+        </div>
+      </div>
+    </div>
 
-          <!-- === Profile: bio left, photo right (flex for vertical center) === -->
-          <div class="profile-header">
-            <div class="profile-text">
-              <p style="text-align: left; font-size: 25pt; margin: 0 0 0.6em 0;">
-                <name><font color="black" size="16">Haibo Liu | 刘海波</font></name>
-              </p>
-              <p style="font-size: 20pt; text-align: justify; margin: 0 0 1em 0;">
-                I am a Research Assistant in the <a href="https://en-soe.westlake.edu.cn/index.shtml/"><b> School of Engineering</b></a> at <a href="https://en.westlake.edu.cn/">Westlake University</a>. Prior to Westlake, I obtained my Ph.D. degree from <a href="https://www.math.tsinghua.edu.cn/">Department of Mathematical Sciences</a> at <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a> supervised by Associate Prof.<a href="https://www.researchgate.net/profile/Junqing-Chen/"><b> Junqing Chen</b></a>. I am honored to have received the <b> Outstanding Doctoral Dissertation of Tsinghua University </b> (<a href="博士毕业论文.pdf" target="_blank">PDF</a>). I obtained my Bachelor's degree with honors in Mathematics at <a href="https://en.lzu.edu.cn/">Lanzhou University</a>.
-              </p>
-              <p style="font-size: 20pt; text-align: justify; margin: 0 0 1em 0;">
-                My current research interests lie in the field of Graphics, 3D Computer Vision and Inverse Problems.
-              </p>
-              <p class="profile-links" style="font-size: 20pt; margin: 0;">
-                <a href="mailto:haibo.liu.research@gmail.com">Email</a> &nbsp;|&nbsp;
-                <a href="https://scholar.google.com/citations?hl=zh-CN&user=AF6-ymUAAAAJ">Google Scholar</a> &nbsp;|&nbsp;
-                <a href="https://github.com/haibo-research">Github</a>
-              </p>
-            </div>
-            <div class="profile-photo">
-              <img width="300" src="images/haibo_circle.png" alt="Haibo Liu">
-            </div>
-          </div>
-          <h2>News</h2>
-          <ul style="font-size: 20pt; text-align: justify;">
-            <li><strong>[06/2024]</strong>
-              <font color="black" size="3"> Our paper LatentISP is accepted by Inverse Problems! </font>
-            </li>
-          </ul>
-          <div class="show_button">
-            <a href="javascript:toggle_vis(&#39;news&#39;)" id="showText">[Show more]</a>
-          </div>
-        
-          <!-- === News Ends === -->
-          <h2>Selected Publications </h2> 
+    <div class="publication">
+      <div class="pub-image">
+        <img src="images/latent_isp.gif" alt="Latent ISP">
+      </div>
+      <div class="pub-info">
+        <div class="pub-title">Solving inverse obstacle scattering problem with latent surface representations</div>
+        <div class="pub-authors">Junqing Chen, Bangti Jin, <b>Haibo Liu</b></div>
+        <div class="pub-venue">Inverse Problems, 2024</div>
+        <div class="pub-links">
+          <a href="https://iopscience.iop.org/article/10.1088/1361-6420/ad466a" target="_blank">Paper</a>
+          <a href="https://github.com/liuhaibogit/Latent_ISP" target="_blank">Code</a>
+        </div>
+      </div>
+    </div>
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:10px;width:35%;vertical-align:middle">
-                <img width="100%" src="images/eit_preview.png">
-              </td>
-              <td style="padding:10px;width:65%;vertical-align:middle">
-                <div class="title">
-                  Generative Prior-Guided Neural Interface Reconstruction for 3D Electrical Impedance Tomography
-                </div>
-                <div class="author">
-                  <b>Haibo Liu</b>, Junqing Chen, Guang Lin
-                </div>
-                <div class="Journal">Journal of Computational Physics 2026</div>
-                <div class="material">
-                  <a href="https://www.sciencedirect.com/science/article/pii/S0021999126001919">Paper</a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:10px;width:35%;vertical-align:middle;text-align:center">
-                <img width="90%" src="images/latent_isp.gif">
-              </td>
-              <td style="padding:10px;width:65%;vertical-align:middle">
-                <div class="title">
-                  Solving inverse obstacle scattering problem with latent surface representations
-                </div>
-                <div class="author">
-                  Junqing Chen, Bangti Jin, <b>Haibo Liu</b>
-                </div>
-                <div class="Journal">Inverse Problems 2024</div>
-                <div class="material">
-                  <a href="https://iopscience.iop.org/article/10.1088/1361-6420/ad466a">Paper</a> |
-                  <a href="https://github.com/liuhaibogit/Latent_ISP">Code</a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:10px;width:35%;vertical-align:middle">
-                <img width="100%" src="images/ilt_preview.png">
-              </td>
-              <td style="padding:10px;width:65%;vertical-align:middle">
-                <div class="title">
-                  An Alternating Direction Method of Multipliers for Inverse Lithography Problem
-                </div>
-                <div class="author">
-                  Junqing Chen, <b>Haibo Liu</b>
-                </div>
-                <div class="Journal">Numer. Math. Theor. Meth. Appl. 2023</div>
-                <div class="material">
-                  <a href="https://global-sci.com/nmtma/article/view/14455">Paper</a>
-                </div>
-              </td>
-            </tr>
-         
-              <!-- <td style="padding:10px;width:35%;vertical-align:middle;text-align: center">
-                  <img width= 90% src='images/vieye.gif'>
-              </td>
-              <td style="padding:10px;width:65%;vertical-align:middle">
-              <div class="title">
-                  VI-Eye: Semantic-based 3D Point Cloud Registration for Infrastructure-assisted Autonomous Driving
-              </div>
-              <div class="author">
-                <b>Yuze He</b>, <a href="https://limacv.github.io/homepage/">Li Ma</a>, Zhehao Jiang, Yi Tang, <a href="https://staff.ie.cuhk.edu.hk/~glxing/">Guoliang Xing</a> (MobiCom 2021)
-              </div>
-              <div class="material">
-                <a href="https://dl.acm.org/doi/10.1145/3447993.3483276">Paper</a> | 
-                <a href="https://www.youtube.com/watch?v=IYu8d8Rzy2s">Teaser Video</a> |
-                <a href="https://docs.google.com/presentation/d/1XvCcihCw_QwEhLiFPr62qV-a2tN3rzXj/edit?usp=sharing&ouid=105439115813761246402&rtpof=true&sd=true">Slides</a>
-              </div>
-              <div class="material">
-                (Acceptance rate: 52/299=17.4%)
-              </div>
-              <div class="description">
-                VI-Eye combines the infrastructure LiDAR point cloud with the autonomous vehicle's LiDAR point cloud, fundamentally boosting vehicle's 3D perception.
-              </div>
-              </td>
-            </tr>  -->
-     
-          </tbody></table>
+    <div class="publication">
+      <div class="pub-image">
+        <img src="images/ilt_preview.png" alt="ILT Preview">
+      </div>
+      <div class="pub-info">
+        <div class="pub-title">An Alternating Direction Method of Multipliers for Inverse Lithography Problem</div>
+        <div class="pub-authors">Junqing Chen, <b>Haibo Liu</b></div>
+        <div class="pub-venue">Numer. Math. Theor. Meth. Appl., 2023</div>
+        <div class="pub-links">
+          <a href="https://global-sci.com/nmtma/article/view/14455" target="_blank">Paper</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- <h2>Other Projects </h2> 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr onmouseout="car_18_stop()" onmouseover="car_18_start()">
-            <td style="padding:10px;width:35%;vertical-align:middle">
-                <video  width=100%  muted autoplay loop>
-                <source src='images/car_small.mov' type="video/mp4"></video>
-            </td>
-            <td style="padding:10px;width:65%;vertical-align:middle">
-            <div class="title">
-                Smart Car Race
-            </div>
-            <div class="author">
-              Kai Wang*, <a href="https://limacv.github.io/homepage/">Li Ma*</a>, <b>Yuze He*</b>
-            </div>
-            <div class="material">
-              <a href="images/car_small.mov">Video (Group Stage)</a> | <a href="images/car_final.mov">Video (Finals)</a>
-            </div>
-            <div class="description">
-            <em>National Undergraduate Smart Car Race of China</em>, 2018
-            </div>
-            <div class="description">
-              Exciting smart car race!
-            </div>
-            </td>
-          </tr> 
-        </tbody></table> -->
+  <section>
+    <h2>Selected Honors & Awards</h2>
+    <ul>
+      <li>
+        The 9th National College Math Competition National Second Prize China 
+        <span class="date-right">2018</span>
+      </li>
+    </ul>
+  </section>
 
-        <h2>Other Publications </h2> 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <ul class="b">
+  <section>
+    <h2>Professional Services</h2>
+    <ul>
+      <li>Co-organizer: “0-1 Seminar”, Tsinghua University.</li>
+    </ul>
+  </section>
 
-          <!-- <div class="description">
-            <b>Soar: Design and Deployment of A Smart Roadside Infrastructure System for Autonomous Driving</b>
-          </div>
-          <div class="author">
-            Shuyao Shi*(co-primary), Neiwen Ling*(co-primary), Zhehao Jiang*(co-primary), Xuan Huang*(co-primary), <b>Yuze He</b>, Xiaoguang Zhao, Bufang Yang, Chen Bian, and Jingfei Xia, Zhenyu Yan, Raymond Yeung, Guoliang Xing
-          </div>
-          <div class="material">
-            <i> The 30th Annual International Conference On Mobile Computing And Networking (<b>MobiCom 2024</b>)</i>
-          </div>
+  <section>
+    <h2>Teaching Assistant</h2>
+    <ul>
+      <li><strong>Fall 2020:</strong> Probability theory and mathematical statistics</li>
+      <li><strong>Spring 2020:</strong> Calculus</li>
+      <li><strong>Fall 2019:</strong> Advanced Numerical Analysis</li> </ul>
+  </section>
 
-          <div class="description">
-            <b>RT-mDL: Supporting Real-Time Mixed Deep Learning Tasks on Edge Platforms</b>
-          </div>
-          <div class="author">
-            Neiwen Ling, Kai Wang, <b>Yuze He</b>, Guoliang Xing, Daqi Xie
-          </div>
-          <div class="material">
-            <i> The 19th ACM Conference on Embedded Networked Sensor Systems (<b>SenSys 2021</b>)</i>
-          </div>
+  <div class="clustrmaps">
+    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=nmVvSE1b5H5sZfb8vSfXV_b9op7GuwpO6MwATl4Yggg"></script>
+  </div>
 
-          <div class="description">
-            <b>FedDL: Federated Learning via Dynamic Layer Sharing for Human Activity Recognition</b>
-          </div>
-          <div class="author">
-            Linlin Tu, Xiaomin Ouyang, Jiayu Zhou, <b>Yuze He</b>, Guoliang Xing
-          <div class="material">
-            <i> The 19th ACM Conference on Embedded Networked Sensor Systems (<b>SenSys 2021</b>)</i>
-          </div> -->
-        </table>
-
-        <h2>Selected Honors & Awards </h2> 
-        <ul style="font-size: 20pt; text-align: justify;">
-          <li> The 9th National College Math Competition National Second Prize China <div style="float:right; text-align:right">2018</div> </li>
-          <!-- <li> <a href="images/Geneva_Award.jpeg">Gold Prize</a>, the 49th International Exhibition of Inventions Geneva <div style="float:right; text-align:right">2024</div> </li>
-          <li> <a href="images/International forum BPA.pdf">Best Paper Award</a>, International Doctoral Forum <div style="float:right; text-align:right">2023</div> </li>
-          <li> <a href="images/BCC_Award.pdf">Best Community Contribution Award</a>, ACM MobiCom <div style="float:right; text-align:right">2023</div> </li>
-          <li> Student Travel Grant, ACM MobiCom <div style="float:right; text-align:right">2023</div> </li>
-          <li> N2Women Young Researcher Fellowship, ACM MobiCom <div style="float:right; text-align:right">2023</div> </li>
-          <li> Reaching Out Award, The Chinese University of Hong Kong <div style="float:right; text-align:right">2023</div> </li>
-          <li> Outstanding Bechalor Dissertation Award, College of Electrical Engineering, Zhejiang University <div style="float:right; text-align:right">2019</div> </li>
-          <li> The First Price, National Automation System Application Contest of China <div style="float:right; text-align:right">2018</div> </li>
-          <li> The Second Price, National Undergraduate Smart Car Race of China <div style="float:right; text-align:right">2018</div> </li>
-          <li> The First Price (Rank: 6/230), Undergraduate Electronic Design Contest of Zhejiang Province <div style="float:right; text-align:right">2018</div> </li>
-          <li> The First Price (Rank: 2/67), Undergraduate Smart Car Race of Zhejiang Province <div style="float:right; text-align:right">2018</div> </li> -->
-        </ul>
-
-        <h2>Professional Services </h2> 
-        <ul style="font-size: 20pt; text-align: justify;">
-          <li> Coorganizer:“0-1 Seminar”, Tsinghua University. </li>
-          <!-- <li> Technical Program Member for ACM/IEEE IoTDI Posters/Demos Program, 2023 and 2024. </li>
-          <li> Technical Program Member for MobiCom 2024 & MobiSys 2024 Artifact Evaluation.</li>
-          <li> Invited Reviewer for INFOCOM 2024, ICRA 2024, CVPR 2024 & 2025, ECCV 2025, Transactions on Mobile Computing (TMC), ACM Transactions on Computing for Healthcare. </li>          
-          <li> Poster Co-Chair of the <a href="https://aiot.ie.cuhk.edu.hk/asi/">Advanced Study Institute 2023 - AI for Internet of Things</a>. </li>          
-          <li> Organizer of the <a href="https://sigmobile.org/mobicom/2023/n2women.html"> ACM MobiCom 2023 N2Women Event</a>. </li> 
-          <li> Organizer of the <a href="https://cpsweek2024-race.f1tenth.org/index.html">17th F1TENTH Autonomous Grand Prix at CPS-IoT Week 2024</a>. </li>  -->
-        </ul>
-
-
-        <h2>Teaching Assistant </h2> 
-        <ul style="font-size: 20pt; text-align: justify;">
-          <li>Fall 2020: Probability theory and mathematical statistics</li>
-          <li> Spring 2020: Calculus </li> 
-          <li> SpriFallng 2019: Advanced Numerical Analysis </li> 
-        </ul>
-
-
-
-
-        <table>
-          <div style="width:20%;margin:0 auto;">
-            <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=nmVvSE1b5H5sZfb8vSfXV_b9op7GuwpO6MwATl4Yggg"></script>
-          </div>
-        </table>
-      </td>
-    </tr>
-  </table>
 </body>
-
-
-
-<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=nmVvSE1b5H5sZfb8vSfXV_b9op7GuwpO6MwATl4Yggg"></script>
 </html>

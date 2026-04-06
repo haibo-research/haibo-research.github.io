@@ -1,140 +1,140 @@
 body {
-    background: #ffffff;
-    color: #000000;
-  }
-  
-  body,
-  td,
-  th,
-  tr,
-  p,
-  a {
-    font-family: Helvetica, Ariel, sans-serif;
-    font-size: 15px;
-  }
-  
-  a,
-  a:visited {
-    /* color: #1772d0; */
-    color: #C41230;
-    text-decoration: none;
-  }
-  a:focus,
-  a:hover {
-    color: #f09228;
-    text-decoration: none;
-  }
-  
-  strong {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 15px;
-  }
-  
-  li {
-    margin: 2px 0;
-  }
-  
-  span.highlight {
-    background-color: #ffffd0;
-  }
-  span.me {
-    color: #000000;
-    font-weight: 600;
-    font-size: 15px;
-  }
-  
-  div.title {
-    color: #000000;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 5px;
-  }
-  div.author {
-    color: #000000;
-    font-size: 15px;
-    font-weight: 400;
-    margin-bottom: 5px;
-  }
-  div.author a:link,
-  div.author a:visited {
-    color: #777777;
-    text-decoration: None;
-  }
-  div.author a:hover {
-    color: #f09228;
-    text-decoration: None;
-  }
-  div.material {
-    color: #000000;
-    font-size: 15px;
-    font-weight: 400;
-  }
-  div.award {
-    color: #FF0000;
-    font-size: 15px;
-    font-weight: 400;
-    margin-top: 10px;
-  }
-  div.description {
-    color: #000000;
-    font-size: 15px;
-    font-weight: 400;
-    margin-top: 10px;
-  }
-  
-  div.institution {
-    color: #000000;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 5px;
-  }
-  div.period {
-    color: #777777;
-    font-size: 15px;
-    font-weight: 400;
-    margin-bottom: 5px;
-  }
-  div.position {
-    color: #000000;
-    font-size: 15px;
-    font-weight: 400;
-  }
+  background: #ffffff;
+  color: #000000;
+}
 
-  /* Hero: flex row — left text block + photo truly vertically centered */
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: Helvetica, Ariel, sans-serif;
+  font-size: 15px;
+}
+
+a,
+a:visited {
+  /* color: #1772d0; */
+  color: #c41230;
+  text-decoration: none;
+}
+a:focus,
+a:hover {
+  color: #f09228;
+  text-decoration: none;
+}
+
+strong {
+  font-family: "Lato", Verdana, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+li {
+  margin: 2px 0;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+}
+span.me {
+  color: #000000;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+div.title {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+div.author {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+div.author a:link,
+div.author a:visited {
+  color: #777777;
+  text-decoration: None;
+}
+div.author a:hover {
+  color: #f09228;
+  text-decoration: None;
+}
+div.material {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 400;
+}
+div.award {
+  color: #ff0000;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+div.description {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+div.institution {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+div.period {
+  color: #777777;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+div.position {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Hero: flex row — left text block + photo truly vertically centered */
+.profile-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 2em;
+  padding-top: 2.25em;
+  padding-bottom: 0.5em;
+}
+.profile-header .profile-text {
+  flex: 1 1 65%;
+  min-width: 0;
+  padding-right: 8px;
+}
+.profile-header .profile-photo {
+  flex: 0 0 auto;
+  text-align: center;
+  line-height: 0;
+}
+.profile-header .profile-photo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 720px) {
   .profile-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 28px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 2em;
-    padding-top: 2.25em;
-    padding-bottom: 0.5em;
-  }
-  .profile-header .profile-text {
-    flex: 1 1 65%;
-    min-width: 0;
-    padding-right: 8px;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 1.5em;
   }
   .profile-header .profile-photo {
-    flex: 0 0 auto;
-    text-align: center;
-    line-height: 0;
+    order: -1;
+    margin-bottom: 0.75em;
   }
-  .profile-header .profile-photo img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-  @media (max-width: 720px) {
-    .profile-header {
-      flex-direction: column;
-      align-items: stretch;
-      padding-top: 1.5em;
-    }
-    .profile-header .profile-photo {
-      order: -1;
-      margin-bottom: 0.75em;
-    }
-  }
+}

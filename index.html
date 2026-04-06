@@ -1,278 +1,332 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Haibo Liu's homepage">
-  <meta name="keywords" content="Haibo Liu, Liu Haibo, homepage, website, Westlake University">
-  <title>Haibo Liu | 刘海波 - Westlake University</title>
-  
-  <link rel="apple-touch-icon" type="image/png" href="images/west-uni.png">
-  <link rel="icon" type="image/png" href="images/west-uni.png">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Haibo Liu's homepage" />
+    <meta name="keywords" content="Haibo Liu, Liu Haibo, homepage, website, Westlake University" />
+    <title>Haibo Liu | 刘海波 - Westlake University</title>
 
-  <style>
-    /* 全局样式 */
-    :root {
-      --text-color: #333333;
-      --light-text: #555555;
-      --link-color: #1a73e8;
-      --link-hover: #115293;
-      --bg-color: #ffffff;
-      --border-color: #e0e0e0;
-    }
+    <link rel="apple-touch-icon" type="image/png" href="images/west-uni.png" />
+    <link rel="icon" type="image/png" href="images/west-uni.png" />
 
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: var(--text-color);
-      background-color: var(--bg-color);
-      line-height: 1.6;
-      font-size: 16px;
-      max-width: 900px; /* 控制最大宽度，居中显示 */
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    a {
-      color: var(--link-color);
-      text-decoration: none;
-    }
+    <style>
+      /* 全局样式 */
+      :root {
+        --text-color: #333333;
+        --light-text: #555555;
+        --link-color: #1a73e8;
+        --link-hover: #115293;
+        --bg-color: #ffffff;
+        --border-color: #e0e0e0;
+      }
 
-    a:hover {
-      text-decoration: underline;
-      color: var(--link-hover);
-    }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        line-height: 1.6;
+        font-size: 16px;
+        max-width: 900px; /* 控制最大宽度，居中显示 */
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
 
-    h1, h2, h3 {
-      color: #222;
-      font-weight: 600;
-    }
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+      }
 
-    h1 { font-size: 2.2rem; margin-bottom: 0.2rem; }
-    h2 { font-size: 1.4rem; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-top: 40px; margin-bottom: 20px; }
+      a:hover {
+        text-decoration: underline;
+        color: var(--link-hover);
+      }
 
-    /* 个人简介区域 (Flexbox 布局) */
-    .profile {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 40px;
-      margin-bottom: 50px;
-    }
+      h1,
+      h2,
+      h3 {
+        color: #222;
+        font-weight: 600;
+      }
 
-    .profile-text { flex: 1; }
-    
-    .profile-text p {
-      text-align: justify;
-      margin-bottom: 15px;
-    }
+      h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.2rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 8px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
 
-    .profile-photo {
-      flex-shrink: 0;
-    }
+      /* 个人简介区域 (Flexbox 布局) */
+      .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 50px;
+      }
 
-    .profile-photo img {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+      .profile-text {
+        flex: 1;
+      }
 
-    /* 链接按钮栏 */
-    .profile-links {
-      margin-top: 15px;
-      font-weight: 500;
-      display: flex;
-      gap: 20px;
-    }
+      .profile-text p {
+        text-align: justify;
+        margin-bottom: 15px;
+      }
 
-    /* 论文列表区域 */
-    .publication {
-      display: flex;
-      flex-direction: row;
-      gap: 30px;
-      margin-bottom: 30px;
-      align-items: center;
-    }
+      .profile-photo {
+        flex-shrink: 0;
+      }
 
-    .pub-image {
-      width: 250px;
-      flex-shrink: 0;
-      text-align: center;
-    }
+      .profile-photo img {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
 
-    .pub-image img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      border: 1px solid #f0f0f0;
-    }
+      /* 链接按钮栏 */
+      .profile-links {
+        margin-top: 15px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center; /* 使用此属性让 Flex 子元素居中 */
+        gap: 20px;
+      }
 
-    .pub-info { flex: 1; }
+      /* 论文列表区域 */
+      .publication {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        margin-bottom: 30px;
+        align-items: center;
+      }
 
-    .pub-title {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 5px;
-      color: #222;
-    }
+      .pub-image {
+        width: 250px;
+        flex-shrink: 0;
+        text-align: center;
+      }
 
-    .pub-authors { color: var(--light-text); margin-bottom: 3px; }
-    .pub-authors b { color: #000; }
-    
-    .pub-venue {
-      font-style: italic;
-      color: #444;
-      margin-bottom: 8px;
-    }
+      .pub-image img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid #f0f0f0;
+      }
 
-    /* 论文资源小按钮标签 (类似于 Arxiv, Code, Video 按钮) */
-    .pub-links {
-      display: flex;
-      gap: 10px;
-    }
+      .pub-info {
+        flex: 1;
+      }
 
-    .pub-links a {
-      font-size: 0.9rem;
-      padding: 3px 10px;
-      background-color: #f1f3f4;
-      border-radius: 12px;
-      border: 1px solid #dadce0;
-      color: #3c4043;
-      transition: all 0.2s;
-    }
+      .pub-title {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #222;
+      }
 
-    .pub-links a:hover {
-      background-color: #e8eaed;
-      text-decoration: none;
-    }
+      .pub-authors {
+        color: var(--light-text);
+        margin-bottom: 3px;
+      }
+      .pub-authors b {
+        color: #000;
+      }
 
-    /* 列表样式 */
-    ul { padding-left: 20px; margin-bottom: 20px; }
-    li { margin-bottom: 8px; }
-    
-    .date-right {
-      float: right;
-      color: #777;
-    }
+      .pub-venue {
+        font-style: italic;
+        color: #444;
+        margin-bottom: 8px;
+      }
 
-    /* 访客地图居中 */
-    .clustrmaps {
-      width: 250px;
-      margin: 60px auto 20px auto;
-      text-align: center;
-    }
+      /* 论文资源小按钮标签 (类似于 Arxiv, Code, Video 按钮) */
+      .pub-links {
+        display: flex;
+        gap: 10px;
+      }
 
-    /* 响应式设计：手机端自动变为上下排列 */
-    @media (max-width: 768px) {
-      .profile { flex-direction: column-reverse; text-align: center; gap: 20px; }
-      .profile-text p { text-align: left; }
-      .profile-links { justify-content: center; }
-      .publication { flex-direction: column; align-items: flex-start; gap: 15px; }
-      .pub-image { width: 100%; max-width: 300px; margin: 0 auto; }
-    }
-  </style>
-</head>
+      .pub-links a {
+        font-size: 0.9rem;
+        padding: 3px 10px;
+        background-color: #f1f3f4;
+        border-radius: 12px;
+        border: 1px solid #dadce0;
+        color: #3c4043;
+        transition: all 0.2s;
+      }
 
-<body>
+      .pub-links a:hover {
+        background-color: #e8eaed;
+        text-decoration: none;
+      }
 
-  <section class="profile">
-    <div class="profile-text">
-      <h1>Haibo Liu | 刘海波</h1>
-      <p>
-        I am a Research Assistant in the <a href="https://en-soe.westlake.edu.cn/index.shtml/">School of Engineering</a> at <a href="https://en.westlake.edu.cn/">Westlake University</a>. Prior to Westlake, I obtained my Ph.D. degree from the <a href="https://www.math.tsinghua.edu.cn/">Department of Mathematical Sciences</a> at <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>, supervised by Prof. <a href="https://math.tsinghua.edu.cn/mathen/info/1125/1366.htm">Junqing Chen</a>. I am honored to have received the <b>Outstanding Doctoral Dissertation of Tsinghua University</b> (<a href="博士毕业论文.pdf" target="_blank">PDF</a>). I obtained my Bachelor's degree with honors in Mathematics at <a href="https://en.lzu.edu.cn/">Lanzhou University</a>.
-      </p>
-      <p>
-        My current research interests lie in the fields of <b>Graphics, 3D Computer Vision, and Inverse Problems</b>.
-      </p>
-      <p class="profile-links" style="font-size: 20pt; margin: 0; text-align: center;">
-        <a href="mailto:haibo.liu.research@gmail.com">Email</a> &nbsp;|&nbsp;
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=AF6-ymUAAAAJ">Google Scholar</a> &nbsp;|&nbsp;
-        <a href="https://github.com/haibo-research">GitHub</a>
-      </p>
-    </div>
-    
-    <div class="profile-photo">
-      <img src="images/haibo_circle.png" alt="Haibo Liu Photo">
-    </div>
-  </section>
+      /* 列表样式 */
+      ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
 
-  <section>
-    <h2>News</h2>
-    <ul>
-      <li><strong>[06/2025]</strong> Received a Ph.D. from Tsinghua University!</li>
-    </ul>
-    <ul>
-      <li><strong>[06/2024]</strong> Our paper <em>LatentISP</em> is accepted by <strong>Inverse Problems</strong>.</li>
-    </ul>
-  </section>
+      .date-right {
+        float: right;
+        color: #777;
+      }
 
-  <section>
-    <h2>Selected Publications</h2>
+      /* 访客地图居中 */
+      .clustrmaps {
+        width: 250px;
+        margin: 60px auto 20px auto;
+        text-align: center;
+      }
 
-    <div class="publication">
-      <div class="pub-image">
-        <img src="images/eit_preview.png" alt="EIT Preview">
+      /* 响应式设计：手机端自动变为上下排列 */
+      @media (max-width: 768px) {
+        .profile {
+          flex-direction: column-reverse;
+          text-align: center;
+          gap: 20px;
+        }
+        .profile-text p {
+          text-align: left;
+        }
+        .profile-links {
+          justify-content: center;
+        }
+        .publication {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 15px;
+        }
+        .pub-image {
+          width: 100%;
+          max-width: 300px;
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="profile">
+      <div class="profile-text">
+        <h1>Haibo Liu | 刘海波</h1>
+        <p>
+          I am a Research Assistant in the <a href="https://en-soe.westlake.edu.cn/index.shtml/">School of Engineering</a> at
+          <a href="https://en.westlake.edu.cn/">Westlake University</a>. Prior to Westlake, I obtained my Ph.D. degree from the
+          <a href="https://www.math.tsinghua.edu.cn/">Department of Mathematical Sciences</a> at
+          <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>, supervised by Prof.
+          <a href="https://math.tsinghua.edu.cn/mathen/info/1125/1366.htm">Junqing Chen</a>. I am honored to have received the
+          <b>Outstanding Doctoral Dissertation of Tsinghua University</b> (<a href="博士毕业论文.pdf" target="_blank">PDF</a>). I obtained my
+          Bachelor's degree with honors in Mathematics at <a href="https://en.lzu.edu.cn/">Lanzhou University</a>.
+        </p>
+        <p>My current research interests lie in the fields of <b>Graphics, 3D Computer Vision, and Inverse Problems</b>.</p>
+        <p class="profile-links">
+          <a href="mailto:haibo.liu.research@gmail.com">[ Email ]</a>
+          <a href="https://scholar.google.com/citations?hl=zh-CN&user=AF6-ymUAAAAJ" target="_blank">[ Google Scholar ]</a>
+          <a href="https://github.com/haibo-research" target="_blank">[ GitHub ]</a>
+        </p>
       </div>
-      <div class="pub-info">
-        <div class="pub-title">Generative Prior-Guided Neural Interface Reconstruction for 3D Electrical Impedance Tomography</div>
-        <div class="pub-authors"><b>Haibo Liu</b>, Junqing Chen, Guang Lin</div>
-        <div class="pub-venue">Journal of Computational Physics, 2026</div>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2505.16487" target="_blank">arxiv</a>
+
+      <div class="profile-photo">
+        <img src="images/haibo_circle.png" alt="Haibo Liu Photo" />
+      </div>
+    </section>
+
+    <section>
+      <h2>News</h2>
+      <section>
+        <h2>News</h2>
+        <ul>
+          <li><strong>[06/2025]</strong> Received a Ph.D. from Tsinghua University!</li>
+          <li><strong>[06/2024]</strong> Our paper <em>LatentISP</em> is accepted by <strong>Inverse Problems</strong>.</li>
+        </ul>
+      </section>
+    </section>
+
+    <section>
+      <h2>Selected Publications</h2>
+
+      <div class="publication">
+        <div class="pub-image">
+          <img src="images/eit_preview.png" alt="EIT Preview" />
+        </div>
+        <div class="pub-info">
+          <div class="pub-title">Generative Prior-Guided Neural Interface Reconstruction for 3D Electrical Impedance Tomography</div>
+          <div class="pub-authors"><b>Haibo Liu</b>, Junqing Chen, Guang Lin</div>
+          <div class="pub-venue">Journal of Computational Physics, 2026</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2505.16487" target="_blank">arxiv</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="publication">
-      <div class="pub-image">
-        <img src="images/KeyframeFace_preview.png" alt="KeyframeFace Preview">
-      </div>
-      <div class="pub-info">
-        <div class="pub-title">KeyframeFace: From Text to Expressive Facial Keyframes</div>
-        <div class="pub-authors">Jingchao Wu, Zejian Kang, <b>Haibo Liu</b>, Yuanchen Fei, Xiangru Huang</div>
-        <div class="pub-venue">Preprint, 2025</div>
-        <div class="pub-links">
-          <a href="https://arxiv.org/html/2512.11321v1" target="_blank">arxiv</a>
+      <div class="publication">
+        <div class="pub-image">
+          <img src="images/KeyframeFace_preview.png" alt="KeyframeFace Preview" />
+        </div>
+        <div class="pub-info">
+          <div class="pub-title">KeyframeFace: From Text to Expressive Facial Keyframes</div>
+          <div class="pub-authors">Jingchao Wu, Zejian Kang, <b>Haibo Liu</b>, Yuanchen Fei, Xiangru Huang</div>
+          <div class="pub-venue">Preprint, 2025</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/html/2512.11321v1" target="_blank">arxiv</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="publication">
-      <div class="pub-image">
-        <img src="images/latent_isp.gif" alt="Latent ISP">
-      </div>
-      <div class="pub-info">
-        <div class="pub-title">Solving inverse obstacle scattering problem with latent surface representations</div>
-        <div class="pub-authors">Junqing Chen, Bangti Jin, <b>Haibo Liu</b></div>
-        <div class="pub-venue">Inverse Problems, 2024</div>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2311.07187" target="_blank">arxiv</a>
-          <a href="https://github.com/liuhaibogit/Latent_ISP" target="_blank">Code</a>
+      <div class="publication">
+        <div class="pub-image">
+          <img src="images/latent_isp.gif" alt="Latent ISP" />
+        </div>
+        <div class="pub-info">
+          <div class="pub-title">Solving inverse obstacle scattering problem with latent surface representations</div>
+          <div class="pub-authors">Junqing Chen, Bangti Jin, <b>Haibo Liu</b></div>
+          <div class="pub-venue">Inverse Problems, 2024</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2311.07187" target="_blank">arxiv</a>
+            <a href="https://github.com/liuhaibogit/Latent_ISP" target="_blank">Code</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="publication">
-      <div class="pub-image">
-        <img src="images/ilt_preview.png" alt="ILT Preview">
-      </div>
-      <div class="pub-info">
-        <div class="pub-title">An Alternating Direction Method of Multipliers for Inverse Lithography Problem</div>
-        <div class="pub-authors">Junqing Chen, <b>Haibo Liu</b></div>
-        <div class="pub-venue">Numer. Math. Theor. Meth. Appl., 2023</div>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2209.10814" target="_blank">arxiv</a>
+      <div class="publication">
+        <div class="pub-image">
+          <img src="images/ilt_preview.png" alt="ILT Preview" />
+        </div>
+        <div class="pub-info">
+          <div class="pub-title">An Alternating Direction Method of Multipliers for Inverse Lithography Problem</div>
+          <div class="pub-authors">Junqing Chen, <b>Haibo Liu</b></div>
+          <div class="pub-venue">Numer. Math. Theor. Meth. Appl., 2023</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2209.10814" target="_blank">arxiv</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- <section>
+    <!-- <section>
     <h2>Selected Honors & Awards</h2>
     <ul>
       <li>
@@ -300,6 +354,5 @@
   <div class="clustrmaps">
     <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=nmVvSE1b5H5sZfb8vSfXV_b9op7GuwpO6MwATl4Yggg"></script>
   </div> -->
-
-</body>
+  </body>
 </html>

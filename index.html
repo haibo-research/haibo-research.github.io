@@ -129,21 +129,23 @@
         transition: all 0.2s ease-in-out;
       }
 
-      /* 内部图片的大小控制 */
-      .profile-links a img {
-        width: 28px; /* 将尺寸从 20px 调大 */
-        height: 28px;
-        object-fit: contain;
-        opacity: 0.8;
-        transition: opacity 0.2s ease;
-        mix-blend-mode: multiply; /* 魔法属性：让图片的白色背景变透明，完美融入外层的灰色按钮 */
+      /* 内部图标的大小和颜色控制 (使用字体图标) */
+      .profile-links a i {
+        font-size: 20px; /* 控制图标本身的大小，比之前图片显得更饱满 */
+        color: #444; /* 深灰色图标，比纯黑更有质感 */
+        transition: color 0.2s ease;
       }
 
       /* 鼠标悬浮(Hover)时的互动效果 */
       .profile-links a:hover {
-        background-color: #e8eaed; /* 颜色变深 */
-        transform: translateY(-3px); /* 微微向上浮动 */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 出现浅浅的阴影 */
+        background-color: #e8eaed; 
+        transform: translateY(-3px); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+      }
+
+      /* 悬浮时，让内部的图标颜色稍微变深 */
+      .profile-links a:hover i {
+        color: #111; 
       }
 
       .profile-links a:hover img {

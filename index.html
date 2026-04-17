@@ -59,9 +59,7 @@
         color: var(--link-hover);
       }
 
-      h1,
-      h2,
-      h3 {
+      h1, h2, h3 {
         color: #222;
         font-weight: 600;
       }
@@ -108,51 +106,57 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
 
-      /* 图标外面的圆形按钮背景 */
+      /* 链接按钮栏 (放大版方块风) */
+      .profile-links {
+        margin-top: 20px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap; /* 适配手机端 */
+      }
+
+      /* 方块按钮外框 */
       .profile-links a {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 50px;  /* 从 40px 放大到 50px */
-        height: 50px; /* 从 40px 放大到 50px */
-        background-color: #f1f3f4;
-        border-radius: 50%;
-        border: 1px solid #dadce0;
+        width: 50px; 
+        height: 50px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        border: 2px solid #e2e8f0;
         transition: all 0.2s ease-in-out;
       }
 
-      /* 内部图标的大小和颜色控制 (兼容字体图标和本地图片) */
+      /* 内部矢量图标的大小和颜色 */
       .profile-links a i {
-        font-size: 26px; /* 从 20px 放大到 26px */
-        color: #444;
+        font-size: 26px; 
+        color: #4a5568; 
         transition: color 0.2s ease;
       }
 
-      /* 小红书等本地图片的大小控制 */
+      /* 兼容小红书本地图片 */
       .profile-links a img {
-        width: 26px;  /* 从 20px 放大到 26px */
-        height: 26px; /* 从 20px 放大到 26px */
+        width: 26px; 
+        height: 26px;
         object-fit: contain;
-        mix-blend-mode: multiply;
-        opacity: 0.7;
+        mix-blend-mode: multiply; /* 消除 JPG/PNG 自带的白色背景 */
+        opacity: 0.8; 
         transition: opacity 0.2s ease;
       }
 
-      /* 鼠标悬浮(Hover)时的互动效果 */
+      /* 鼠标悬浮(Hover)互动 */
       .profile-links a:hover {
-        background-color: #e8eaed; 
-        transform: translateY(-3px); 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        border-color: #cbd5e1; 
+        background-color: #f8fafc; 
+        transform: translateY(-2px); 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
       }
-
-      /* 悬浮时，让内部的图标变清晰/变深 */
       .profile-links a:hover i {
-        color: #111; 
+        color: #1a202c;
       }
       .profile-links a:hover img {
         opacity: 1; 
       }
-
 
       /* 论文列表区域 */
       .publication {
@@ -201,24 +205,29 @@
         margin-bottom: 8px;
       }
 
-      /* 论文资源小按钮标签 (类似于 Arxiv, Code, Video 按钮) */
+      /* 论文资源小按钮标签 (学术界同款胶囊按钮) */
       .pub-links {
         display: flex;
         gap: 10px;
+        flex-wrap: wrap;
       }
 
       .pub-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
         font-size: 0.9rem;
-        padding: 3px 10px;
+        padding: 4px 12px;
         background-color: #f1f3f4;
         border-radius: 12px;
         border: 1px solid #dadce0;
         color: #3c4043;
-        transition: all 0.2s;
+        transition: all 0.2s ease;
       }
 
       .pub-links a:hover {
         background-color: #e8eaed;
+        color: #1a73e8;
         text-decoration: none;
       }
 
@@ -229,18 +238,6 @@
       }
       li {
         margin-bottom: 8px;
-      }
-
-      .date-right {
-        float: right;
-        color: #777;
-      }
-
-      /* 访客地图居中 */
-      .clustrmaps {
-        width: 250px;
-        margin: 60px auto 20px auto;
-        text-align: center;
       }
 
       /* 响应式设计：手机端自动变为上下排列 */
@@ -282,6 +279,7 @@
           Bachelor's degree with honors in Mathematics at Lanzhou University.
         </p>
         <p>My current research interests lie in the fields of <b>Graphics, 3D Computer Vision, and Inverse Problems</b>.</p>
+        
         <p class="profile-links">
           <a href="https://scholar.google.com/citations?user=AF6-ymUAAAAJ&hl=en" target="_blank" title="Google Scholar">
             <i class="fas fa-graduation-cap"></i>
@@ -310,13 +308,11 @@
     </section>
 
     <section>
-      <section>
-        <h2>News</h2>
-        <ul>
-          <li><strong>[06/2025]</strong> Received a Ph.D. from Tsinghua University!</li>
-          <li><strong>[06/2024]</strong> Our paper <em>LatentISP</em> is accepted by <strong>Inverse Problems</strong>.</li>
-        </ul>
-      </section>
+      <h2>News</h2>
+      <ul>
+        <li><strong>[06/2025]</strong> Received a Ph.D. from Tsinghua University!</li>
+        <li><strong>[06/2024]</strong> Our paper <em>LatentISP</em> is accepted by <strong>Inverse Problems</strong>.</li>
+      </ul>
     </section>
 
     <section>
@@ -331,7 +327,9 @@
           <div class="pub-authors"><b>Haibo Liu</b>, Guang Lin</div>
           <div class="pub-venue">Preprint, 2026</div>
           <div class="pub-links">
-            <a href="https://arxiv.org/abs/2604.11375" target="_blank">arxiv</a>
+            <a href="https://arxiv.org/abs/2604.11375" target="_blank">
+              <i class="fas fa-file-pdf"></i> arXiv
+            </a>
           </div>
         </div>
       </div>
@@ -345,7 +343,9 @@
           <div class="pub-authors"><b>Haibo Liu</b>, Junqing Chen, Guang Lin</div>
           <div class="pub-venue">Journal of Computational Physics, 2026</div>
           <div class="pub-links">
-            <a href="https://arxiv.org/abs/2505.16487" target="_blank">arxiv</a>
+            <a href="https://arxiv.org/abs/2505.16487" target="_blank">
+              <i class="fas fa-file-pdf"></i> arXiv
+            </a>
           </div>
         </div>
       </div>
@@ -359,7 +359,9 @@
           <div class="pub-authors">Jingchao Wu, Zejian Kang, <b>Haibo Liu</b>, Yuanchen Fei, Xiangru Huang</div>
           <div class="pub-venue">Preprint, 2025</div>
           <div class="pub-links">
-            <a href="https://arxiv.org/abs/2512.11321" target="_blank">arxiv</a>
+            <a href="https://arxiv.org/abs/2512.11321" target="_blank">
+              <i class="fas fa-file-pdf"></i> arXiv
+            </a>
           </div>
         </div>
       </div>
@@ -373,8 +375,12 @@
           <div class="pub-authors">Junqing Chen, Bangti Jin, <b>Haibo Liu</b></div>
           <div class="pub-venue">Inverse Problems, 2024</div>
           <div class="pub-links">
-            <a href="https://arxiv.org/abs/2311.07187" target="_blank">arxiv</a>
-            <a href="https://github.com/liuhaibogit/Latent_ISP" target="_blank">Code</a>
+            <a href="https://arxiv.org/abs/2311.07187" target="_blank">
+              <i class="fas fa-file-pdf"></i> arXiv
+            </a>
+            <a href="https://github.com/liuhaibogit/Latent_ISP" target="_blank">
+              <i class="fab fa-github"></i> Code
+            </a>
           </div>
         </div>
       </div>
@@ -388,39 +394,13 @@
           <div class="pub-authors">Junqing Chen, <b>Haibo Liu</b></div>
           <div class="pub-venue">Numer. Math. Theor. Meth. Appl., 2023</div>
           <div class="pub-links">
-            <a href="https://arxiv.org/abs/2209.10814" target="_blank">arxiv</a>
+            <a href="https://arxiv.org/abs/2209.10814" target="_blank">
+              <i class="fas fa-file-pdf"></i> arXiv
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- <section>
-    <h2>Selected Honors & Awards</h2>
-    <ul>
-      <li>
-        The 9th National College Math Competition National Second Prize China 
-        <span class="date-right">2018</span>
-      </li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Professional Services</h2>
-    <ul>
-      <li>Co-organizer: “0-1 Seminar”, Tsinghua University.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Teaching Assistant</h2>
-    <ul>
-      <li><strong>Fall 2020:</strong> Probability theory and mathematical statistics</li>
-      <li><strong>Spring 2020:</strong> Calculus</li>
-      <li><strong>Fall 2019:</strong> Advanced Numerical Analysis</li> </ul>
-  </section>
-
-  <div class="clustrmaps">
-    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=nmVvSE1b5H5sZfb8vSfXV_b9op7GuwpO6MwATl4Yggg"></script>
-  </div> -->
   </body>
 </html>

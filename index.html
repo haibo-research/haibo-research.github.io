@@ -127,6 +127,19 @@
         transition: all 0.2s ease-in-out;
       }
 
+      /* === 特别为 CV 按钮设计的胶囊样式 === */
+      .profile-links a.cv-button {
+        width: auto; /* 允许按钮根据文字自适应宽度 */
+        padding: 0 16px; /* 左右增加内边距 */
+        gap: 6px; /* 图标和 CV 文字之间的间距 */
+        font-weight: 600; /* 文字加粗一点显得更专业 */
+        color: #4a5568; /* 字体颜色和图标颜色统一 */
+      }
+      
+      .profile-links a.cv-button:hover {
+        color: #1a202c; /* 鼠标放上去时文字变黑 */
+      }
+
       /* 内部矢量图标的大小和颜色 */
       .profile-links a i {
         font-size: 26px; 
@@ -281,6 +294,10 @@
         <p>My current research interests lie in the fields of <b>Graphics, 3D Computer Vision, and Inverse Problems</b>.</p>
         
         <p class="profile-links">
+          <a href="CV.pdf" target="_blank" title="Curriculum Vitae" class="cv-button">
+            <i class="fas fa-file-pdf"></i> CV
+          </a>
+          
           <a href="mailto:haibo.liu.research@gmail.com" title="Email">
             <i class="fas fa-envelope"></i>
           </a>

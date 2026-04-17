@@ -129,11 +129,12 @@
 
       /* 内部图片的大小控制 */
       .profile-links a img {
-        width: 20px;
-        height: 20px;
+        width: 28px; /* 将尺寸从 20px 调大 */
+        height: 28px;
         object-fit: contain;
-        opacity: 0.8; /* 默认状态稍微透明一点，显得柔和 */
+        opacity: 0.8;
         transition: opacity 0.2s ease;
+        mix-blend-mode: multiply; /* 魔法属性：让图片的白色背景变透明，完美融入外层的灰色按钮 */
       }
 
       /* 鼠标悬浮(Hover)时的互动效果 */

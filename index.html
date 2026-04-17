@@ -116,24 +116,20 @@
         flex-wrap: wrap; /* 适配手机端，放不下会自动换行 */
       }
 
-      /* 图标外面的圆形按钮背景 */
-      .profile-links a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        background-color: #f1f3f4; /* 与 arxiv 按钮同款底色 */
-        border-radius: 50%; /* 变成正圆形 */
-        border: 1px solid #dadce0; /* 与 arxiv 按钮同款边框 */
-        transition: all 0.2s ease-in-out;
+      /* 内部图标的大小和颜色控制 (兼容字体图标和本地图片) */
+      .profile-links a i {
+        font-size: 20px;
+        color: #444;
+        transition: color 0.2s ease;
       }
 
-      /* 内部图标的大小和颜色控制 (使用字体图标) */
-      .profile-links a i {
-        font-size: 20px; /* 控制图标本身的大小，比之前图片显得更饱满 */
-        color: #444; /* 深灰色图标，比纯黑更有质感 */
-        transition: color 0.2s ease;
+      .profile-links a img {
+        width: 20px; /* 控制图片图标的大小 */
+        height: 20px;
+        object-fit: contain;
+        mix-blend-mode: multiply; /* 魔法属性：消除 JPG/PNG 自带的白色背景 */
+        opacity: 0.7; /* 默认微透明，模拟矢量图标的深灰色质感 */
+        transition: opacity 0.2s ease;
       }
 
       /* 鼠标悬浮(Hover)时的互动效果 */
@@ -143,9 +139,12 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
       }
 
-      /* 悬浮时，让内部的图标颜色稍微变深 */
+      /* 悬浮时，让内部的图标变清晰/变深 */
       .profile-links a:hover i {
         color: #111; 
+      }
+      .profile-links a:hover img {
+        opacity: 1; /* 鼠标放上去时，小红书和学术图标恢复100%原本的色彩和清晰度 */
       }
 
 

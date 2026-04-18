@@ -44,15 +44,14 @@
         background-color: var(--bg-color);
         line-height: 1.6;
         
-        /* 🌟 1. 经典舒适阅读字号 */
-        font-size: 18px; 
+        /* 🌟 将基础字体放大到 20px，满足你的大字号需求 */
+        font-size: 20px; 
         
-        /* 🌟 2. 饱满排版的魔法：动态占据屏幕宽度，去除多余白边 */
         width: 88%; 
-        max-width: 1150px; /* 比之前更宽，完美适配现代宽屏显示器 */
+        max-width: 1150px; 
         
-        margin: 0 auto; /* 保证主体居中 */
-        padding: 50px 0; /* 上下留出 50px 的空间，左右的留白由 width 自动控制 */
+        margin: 0 auto; 
+        padding: 50px 0; 
       }
 
       a {
@@ -71,11 +70,11 @@
       }
 
       h1 {
-        font-size: 2.6rem; /* 从 2.2rem 放大 */
+        font-size: 2.8rem; /* 等比放大标题 */
         margin-bottom: 0.2rem;
       }
       h2 {
-        font-size: 1.6rem; /* 从 1.4rem 放大 */
+        font-size: 1.8rem; /* 等比放大副标题 */
         border-bottom: 1px solid var(--border-color);
         padding-bottom: 8px;
         margin-top: 40px;
@@ -87,7 +86,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 60px; /* 🌟 从 40px 改为 60px：随着屏幕变宽，拉开一点距离更有呼吸感 */
+        gap: 60px; 
         margin-bottom: 50px;
       }
 
@@ -105,19 +104,19 @@
       }
 
       .profile-photo img {
-        width: 260px; /* 🌟 从 220px 放大到 260px，撑起宽屏的右侧 */
+        width: 260px; 
         height: 260px;
         border-radius: 50%;
         object-fit: cover;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
 
-      /* 链接按钮栏 (放大版方块风) */
+      /* 链接按钮栏 */
       .profile-links {
         margin-top: 20px;
         display: flex;
         gap: 12px;
-        flex-wrap: wrap; /* 适配手机端 */
+        flex-wrap: wrap; 
       }
 
       /* 方块按钮外框 */
@@ -125,10 +124,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 42px; /* 从 50px 缩小到 42px */
-        height: 42px; /* 从 50px 缩小到 42px */
+        width: 42px; 
+        height: 42px; 
         background-color: #ffffff;
-        border-radius: 8px; /* 圆角稍微改小一点，适配变小的方框 */
+        border-radius: 8px; 
         border: 2px solid #e2e8f0;
         transition: all 0.2s ease-in-out;
       }
@@ -140,11 +139,11 @@
         gap: 6px; 
         font-weight: 600; 
         color: #4a5568; 
-        margin-right: 16px; /* 🌟 就是这一行：在右侧额外增加一段空隙 */
+        margin-right: 16px; 
       }
       
       .profile-links a.cv-button:hover {
-        color: #1a202c; /* 鼠标放上去时文字变黑 */
+        color: #1a202c; 
       }
 
       /* 内部矢量图标的大小和颜色 */
@@ -159,7 +158,7 @@
         width: 26px; 
         height: 26px;
         object-fit: contain;
-        mix-blend-mode: multiply; /* 消除 JPG/PNG 自带的白色背景 */
+        mix-blend-mode: multiply; 
         opacity: 0.8; 
         transition: opacity 0.2s ease;
       }
@@ -205,7 +204,7 @@
       }
 
       .pub-title {
-        font-size: 1.15rem;
+        font-size: 1.25rem; /* 随正文等比放大一点，保持层级 */
         font-weight: 600;
         margin-bottom: 5px;
         color: #222;
@@ -225,7 +224,7 @@
         margin-bottom: 8px;
       }
 
-      /* 论文资源小按钮标签 (学术界同款胶囊按钮) */
+      /* 论文资源小按钮标签 */
       .pub-links {
         display: flex;
         gap: 10px;
@@ -236,7 +235,7 @@
         display: inline-flex;
         align-items: center;
         gap: 5px;
-        font-size: 0.9rem;
+        font-size: 0.95rem; /* 小字也稍微调大一点点 */
         padding: 4px 12px;
         background-color: #f1f3f4;
         border-radius: 12px;
@@ -260,7 +259,7 @@
         margin-bottom: 8px;
       }
 
-      /* 响应式设计：手机端自动变为上下排列 */
+      /* 响应式设计：手机端 */
       @media (max-width: 768px) {
         .profile {
           flex-direction: column-reverse;

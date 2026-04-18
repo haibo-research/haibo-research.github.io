@@ -43,8 +43,12 @@
         color: var(--text-color);
         background-color: var(--bg-color);
         line-height: 1.6;
-        font-size: 16px;
-        max-width: 900px; /* 控制最大宽度，居中显示 */
+        
+        /* 🌟 将基础字体从 16px 放大到 18px 或 20px (模拟你之前 16 * 1.25 = 20px 的效果) */
+        font-size: 18px; 
+        
+        /* 🌟 因为字变大了，容器也要稍微变宽，否则一行装不下几个字 */
+        max-width: 960px; 
         margin: 0 auto;
         padding: 40px 20px;
       }
@@ -65,11 +69,11 @@
       }
 
       h1 {
-        font-size: 2.2rem;
+        font-size: 2.6rem; /* 从 2.2rem 放大 */
         margin-bottom: 0.2rem;
       }
       h2 {
-        font-size: 1.4rem;
+        font-size: 1.6rem; /* 从 1.4rem 放大 */
         border-bottom: 1px solid var(--border-color);
         padding-bottom: 8px;
         margin-top: 40px;

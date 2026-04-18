@@ -44,13 +44,15 @@
         background-color: var(--bg-color);
         line-height: 1.6;
         
-        /* 🌟 将基础字体从 16px 放大到 18px 或 20px (模拟你之前 16 * 1.25 = 20px 的效果) */
+        /* 🌟 1. 经典舒适阅读字号 */
         font-size: 18px; 
         
-        /* 🌟 因为字变大了，容器也要稍微变宽，否则一行装不下几个字 */
-        max-width: 960px; 
-        margin: 0 auto;
-        padding: 40px 20px;
+        /* 🌟 2. 饱满排版的魔法：动态占据屏幕宽度，去除多余白边 */
+        width: 88%; 
+        max-width: 1150px; /* 比之前更宽，完美适配现代宽屏显示器 */
+        
+        margin: 0 auto; /* 保证主体居中 */
+        padding: 50px 0; /* 上下留出 50px 的空间，左右的留白由 width 自动控制 */
       }
 
       a {
@@ -80,12 +82,12 @@
         margin-bottom: 20px;
       }
 
-      /* 个人简介区域 (Flexbox 布局) */
+      /* 个人简介区域 */
       .profile {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 40px;
+        gap: 60px; /* 🌟 从 40px 改为 60px：随着屏幕变宽，拉开一点距离更有呼吸感 */
         margin-bottom: 50px;
       }
 
@@ -103,8 +105,8 @@
       }
 
       .profile-photo img {
-        width: 220px;
-        height: 220px;
+        width: 260px; /* 🌟 从 220px 放大到 260px，撑起宽屏的右侧 */
+        height: 260px;
         border-radius: 50%;
         object-fit: cover;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

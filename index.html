@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Haibo Liu's homepage" />
     <meta name="keywords" content="Haibo Liu, Liu Haibo, homepage, website, Westlake University" />
-    
+
     <meta name="google-site-verification" content="u1ZtGizVZncTcWbW84pMH0fk3r483LBBwl3aL8B6BXk" />
 
     <title>Haibo Liu | 刘海波 - Westlake University</title>
@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
     <style>
       /* 全局样式 */
@@ -43,15 +43,15 @@
         color: var(--text-color);
         background-color: var(--bg-color);
         line-height: 1.6;
-        
+
         /* 🌟 将基础字体放大到 20px，满足你的大字号需求 */
-        font-size: 20px; 
-        
-        width: 88%; 
-        max-width: 1150px; 
-        
-        margin: 0 auto; 
-        padding: 50px 0; 
+        font-size: 20px;
+
+        width: 88%;
+        max-width: 1150px;
+
+        margin: 0 auto;
+        padding: 50px 0;
       }
 
       a {
@@ -64,7 +64,9 @@
         color: var(--link-hover);
       }
 
-      h1, h2, h3 {
+      h1,
+      h2,
+      h3 {
         color: #222;
         font-weight: 600;
       }
@@ -86,7 +88,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 60px; 
+        gap: 60px;
         margin-bottom: 50px;
       }
 
@@ -104,7 +106,7 @@
       }
 
       .profile-photo img {
-        width: 260px; 
+        width: 260px;
         height: 260px;
         border-radius: 50%;
         object-fit: cover;
@@ -116,7 +118,7 @@
         margin-top: 20px;
         display: flex;
         gap: 12px;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
       }
 
       /* 方块按钮外框 */
@@ -124,57 +126,57 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 42px; 
-        height: 42px; 
+        width: 42px;
+        height: 42px;
         background-color: #ffffff;
-        border-radius: 8px; 
+        border-radius: 8px;
         border: 2px solid #e2e8f0;
         transition: all 0.2s ease-in-out;
       }
 
       /* === 特别为 CV 按钮设计的胶囊样式 === */
       .profile-links a.cv-button {
-        width: auto; 
-        padding: 0 16px; 
-        gap: 6px; 
-        font-weight: 600; 
-        color: #4a5568; 
-        margin-right: 16px; 
+        width: auto;
+        padding: 0 16px;
+        gap: 6px;
+        font-weight: 600;
+        color: #4a5568;
+        margin-right: 16px;
       }
-      
+
       .profile-links a.cv-button:hover {
-        color: #1a202c; 
+        color: #1a202c;
       }
 
       /* 内部矢量图标的大小和颜色 */
       .profile-links a i {
-        font-size: 26px; 
-        color: #4a5568; 
+        font-size: 26px;
+        color: #4a5568;
         transition: color 0.2s ease;
       }
 
       /* 兼容小红书本地图片 */
       .profile-links a img {
-        width: 26px; 
+        width: 26px;
         height: 26px;
         object-fit: contain;
-        mix-blend-mode: multiply; 
-        opacity: 0.8; 
+        mix-blend-mode: multiply;
+        opacity: 0.8;
         transition: opacity 0.2s ease;
       }
 
       /* 鼠标悬浮(Hover)互动 */
       .profile-links a:hover {
-        border-color: #cbd5e1; 
-        background-color: #f8fafc; 
-        transform: translateY(-2px); 
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+        border-color: #cbd5e1;
+        background-color: #f8fafc;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
       }
       .profile-links a:hover i {
         color: #1a202c;
       }
       .profile-links a:hover img {
-        opacity: 1; 
+        opacity: 1;
       }
 
       /* 论文列表区域 */
@@ -291,19 +293,17 @@
       <div class="profile-text">
         <h1>Haibo Liu | 刘海波</h1>
         <p>
-          I am a Research Assistant at Westlake University. Prior to Westlake, I obtained my Ph.D. degree from the 
-          Department of Mathematical Sciences at Tsinghua University, supervised by Prof.
+          I am a Research Assistant at Westlake University. Prior to Westlake, I obtained my Ph.D. degree from the Department of Mathematical Sciences
+          at Tsinghua University, supervised by Prof.
           <a href="https://math.tsinghua.edu.cn/mathen/info/1125/1366.htm">Junqing Chen</a>. I am honored to have received the
           <b>Outstanding Doctoral Dissertation of Tsinghua University</b> (<a href="博士毕业论文.pdf" target="_blank">PDF</a>). I obtained my
           Bachelor's degree with honors in Mathematics at Lanzhou University.
         </p>
         <p>My current research interests lie in the fields of <b>Graphics, 3D Computer Vision, and Inverse Problems</b>.</p>
-        
+
         <p class="profile-links">
-          <a href="CV.pdf" target="_blank" title="Curriculum Vitae" class="cv-button">
-            <i class="fas fa-file-pdf"></i> CV
-          </a>
-          
+          <a href="CV.pdf" target="_blank" title="Curriculum Vitae" class="cv-button"> <i class="fas fa-file-pdf"></i> CV </a>
+
           <a href="mailto:haibo.liu.research@gmail.com" title="Email">
             <i class="fas fa-envelope"></i>
           </a>
@@ -320,7 +320,7 @@
             <i class="fa-brands fa-x-twitter"></i>
           </a>
           <a href="https://www.xiaohongshu.com/user/profile/61d2edf40000000010004a93" target="_blank" title="Xiaohongshu">
-             <img src="images/xiaohongshu.jpg" alt="Xiaohongshu" />
+            <img src="images/xiaohongshu.jpg" alt="Xiaohongshu" />
           </a>
         </p>
       </div>
@@ -350,12 +350,8 @@
           <div class="pub-authors"><b>Haibo Liu</b>, Guang Lin</div>
           <div class="pub-venue">Preprint, 2026</div>
           <div class="pub-links">
-            <a href="https://arxiv.org/abs/2604.11375" target="_blank">
-              <i class="fas fa-file-pdf"></i> arXiv
-            </a>
-            <a href="https://github.com/haibo-research/DiLO" target="_blank">
-              <i class="fab fa-github"></i> Code
-            </a>
+            <a href="https://arxiv.org/abs/2604.11375" target="_blank"> <i class="fas fa-file-pdf"></i> arXiv </a>
+            <a href="https://github.com/haibo-research/DiLO" target="_blank"> <i class="fab fa-github"></i> Code </a>
           </div>
         </div>
       </div>
@@ -369,12 +365,8 @@
           <div class="pub-authors"><b>Haibo Liu</b>, Junqing Chen, Guang Lin</div>
           <div class="pub-venue">Journal of Computational Physics, 2026</div>
           <div class="pub-links">
-            <a href="https://arxiv.org/abs/2505.16487" target="_blank">
-              <i class="fas fa-file-pdf"></i> arXiv
-            </a>
-            <a href="https://github.com/haibo-research/Gen-NIR" target="_blank">
-              <i class="fab fa-github"></i> Code
-            </a>
+            <a href="https://arxiv.org/abs/2505.16487" target="_blank"> <i class="fas fa-file-pdf"></i> arXiv </a>
+            <a href="https://github.com/haibo-research/Gen-NIR" target="_blank"> <i class="fab fa-github"></i> Code </a>
           </div>
         </div>
       </div>
@@ -388,9 +380,7 @@
           <div class="pub-authors">Jingchao Wu, Zejian Kang, <b>Haibo Liu</b>, Yuanchen Fei, Xiangru Huang</div>
           <div class="pub-venue">Preprint, 2025</div>
           <div class="pub-links">
-            <a href="https://arxiv.org/abs/2512.11321" target="_blank">
-              <i class="fas fa-file-pdf"></i> arXiv
-            </a>
+            <a href="https://arxiv.org/abs/2512.11321" target="_blank"> <i class="fas fa-file-pdf"></i> arXiv </a>
           </div>
         </div>
       </div>
@@ -404,12 +394,8 @@
           <div class="pub-authors">Junqing Chen, Bangti Jin, <b>Haibo Liu</b></div>
           <div class="pub-venue">Inverse Problems, 2024</div>
           <div class="pub-links">
-            <a href="https://arxiv.org/abs/2311.07187" target="_blank">
-              <i class="fas fa-file-pdf"></i> arXiv
-            </a>
-            <a href="https://github.com/liuhaibogit/Latent_ISP" target="_blank">
-              <i class="fab fa-github"></i> Code
-            </a>
+            <a href="https://arxiv.org/abs/2311.07187" target="_blank"> <i class="fas fa-file-pdf"></i> arXiv </a>
+            <a href="https://github.com/liuhaibogit/Latent_ISP" target="_blank"> <i class="fab fa-github"></i> Code </a>
           </div>
         </div>
       </div>
@@ -423,13 +409,10 @@
           <div class="pub-authors">Junqing Chen, <b>Haibo Liu</b></div>
           <div class="pub-venue">Numer. Math. Theor. Meth. Appl., 2023</div>
           <div class="pub-links">
-            <a href="https://arxiv.org/abs/2209.10814" target="_blank">
-              <i class="fas fa-file-pdf"></i> arXiv
-            </a>
+            <a href="https://arxiv.org/abs/2209.10814" target="_blank"> <i class="fas fa-file-pdf"></i> arXiv </a>
           </div>
         </div>
       </div>
     </section>
-
   </body>
 </html>
